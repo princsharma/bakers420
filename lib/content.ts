@@ -1,4 +1,4 @@
-export type FaqCategory = "Eligibility" | "Process" | "Pricing" | "Renewal";
+export type FaqCategory = "Eligibility" | "Process" | "Renewal";
 
 export interface FaqItem {
   question: string;
@@ -8,60 +8,69 @@ export interface FaqItem {
 
 export const FAQS: FaqItem[] = [
   {
-    category: "Eligibility",
-    question: "What is a California medical marijuana card and who needs one?",
+    category: "Process",
+    question: "Can I get a California medical marijuana card online?",
     answer:
-      "A California medical marijuana card is a state-issued Medical Marijuana Identification Card (MMIC) that confirms a patient has received a physician's recommendation for medical cannabis under the Compassionate Use Act (Prop 215) and SB 420. It is most useful for patients who want sales-tax exemptions, higher possession limits, and clearer legal protection than adult-use status alone.",
+      "Yes. California patients can complete medical marijuana evaluations online through telemedicine appointments with licensed physicians.",
+  },
+  {
+    category: "Renewal",
+    question:
+      "How long does a California medical marijuana recommendation last?",
+    answer:
+      "Most California medical marijuana recommendations are valid for one year from the date of issue.",
   },
   {
     category: "Eligibility",
-    question: "How do I qualify under Prop 215 / SB 420?",
+    question: "Does California issue a state medical marijuana card?",
     answer:
-      "You qualify if you are a California resident with a qualifying condition such as chronic pain, severe nausea, cancer, AIDS, anorexia, cachexia, arthritis, glaucoma, migraine, persistent muscle spasms (including MS), seizures (including epilepsy), or any other chronic or persistent symptom that substantially limits major life activities.",
+      "Yes. Eligible patients may apply for the California Medical Marijuana Identification Card (MMIC) program through their local county health department for additional state-recognized identification protections. In Bakersfield, applications are processed through the Kern County Public Health Services Department.",
   },
   {
     category: "Process",
-    question: "Can I get a California MMJ recommendation entirely online?",
+    question:
+      "What documents are needed to apply for a California medical marijuana recommendation?",
     answer:
-      "Yes. Baker420 California connects you with a CA-licensed physician through a secure HIPAA-compliant video visit. Most evaluations are completed in 10 to 15 minutes, and approved patients receive a digital physician's recommendation the same day.",
+      "Patients generally need a valid government-issued photo ID, proof of California residency, medical records if available, and a completed medical evaluation with a licensed physician.",
   },
   {
     category: "Eligibility",
     question:
-      "What's the difference between a physician's recommendation and the county MMIC?",
+      "Can medical marijuana patients legally buy cannabis from dispensaries in California?",
     answer:
-      "A physician's recommendation is the document signed by your evaluating physician — it is what most patients actually use. The MMIC is a state-tracked county-issued card that adds sales-tax exemption and legal protections. The MMIC application is optional and filed through your county health department.",
+      "Yes. Adults age 21 and older may legally purchase cannabis in California, and medical marijuana patients with valid recommendations may access licensed dispensaries throughout the state.",
   },
   {
-    category: "Pricing",
-    question: "How much does it cost?",
+    category: "Eligibility",
+    question:
+      "How much cannabis can medical marijuana patients possess in California?",
     answer:
-      "The California Resident Special is $59 flat for a full physician evaluation, with a money-back guarantee if you are not approved. The optional county MMIC card fee is around $44 (or $22 for Medi-Cal beneficiaries) and is paid separately to your county.",
-  },
-  {
-    category: "Renewal",
-    question: "How long is a California MMJ recommendation valid?",
-    answer:
-      "A California physician's recommendation is valid for 1 year. You can renew online with Baker420 in under 10 minutes — most renewal patients are approved the same day.",
-  },
-  {
-    category: "Pricing",
-    question: "What are the tax benefits of holding an MMIC in California?",
-    answer:
-      "MMIC cardholders are exempt from California sales and use tax on medical cannabis purchases at licensed dispensaries. For regular patients this typically pays back the card cost within a few refills.",
+      "Under California law, qualified medical marijuana patients may possess and cultivate amounts of cannabis reasonably related to their medical needs. Adult-use laws also allow adults 21+ to possess up to 28.5 grams of cannabis flower and cultivate up to six plants for personal use.",
   },
   {
     category: "Process",
-    question: "Can I designate a primary caregiver in California?",
+    question: "Do I need to visit a clinic in person to get evaluated?",
     answer:
-      "Yes. Under California law you may designate a primary caregiver who is responsible for your housing, health, or safety. The caregiver designation is recorded with the physician and, if you obtain an MMIC, with your county.",
+      "Many California medical marijuana evaluations can be completed remotely through secure telemedicine appointments — no in-person visit required for most Bakersfield patients.",
+  },
+  {
+    category: "Eligibility",
+    question: "Is PTSD a qualifying condition for a California medical marijuana card?",
+    answer:
+      "Yes. PTSD is commonly recognized as a qualifying condition for medical marijuana recommendations in California.",
+  },
+  {
+    category: "Renewal",
+    question:
+      "What is the California Medical Marijuana Identification Card (MMIC) Program?",
+    answer:
+      "The MMIC program is California's voluntary state-issued medical cannabis identification card system administered through county public health departments. Bakersfield residents apply through the Kern County Public Health Services Department.",
   },
 ];
 
 export const FAQ_CATEGORIES: FaqCategory[] = [
   "Eligibility",
   "Process",
-  "Pricing",
   "Renewal",
 ];
 
@@ -78,27 +87,27 @@ export interface Review {
 export const REVIEWS: Review[] = [
   {
     name: "Maria L.",
-    city: "Long Beach, CA",
+    city: "Bakersfield, CA",
     date: "March 18, 2026",
     rating: 5,
     title: "Same-day approval — exactly as promised",
-    body: "I scheduled my evaluation Tuesday morning and had my California physician's recommendation by lunch. Dr. Martinez listened carefully and explained every step. Used it the same afternoon at my dispensary in Long Beach. Could not be easier.",
+    body: "I scheduled my evaluation Tuesday morning and had my California physician's recommendation by lunch. Dr. Martinez listened carefully and explained every step. Used it the same afternoon at my dispensary in Bakersfield. Could not be easier.",
     featured: true,
   },
   {
     name: "Jamal R.",
-    city: "Oakland, CA",
+    city: "Tehachapi, CA",
     date: "February 02, 2026",
     rating: 5,
     title: "Saved me significant money in taxes",
-    body: "Picked up my MMIC right after my Baker420 evaluation. The sales tax exemption alone has saved me well over $200 this year. The whole process was fast, respectful, and 100% online.",
+    body: "Picked up my MMIC through Kern County right after my Baker420 evaluation. The sales tax exemption alone has saved me well over $200 this year. The whole process was fast, respectful, and 100% online.",
   },
   {
     name: "Hannah K.",
-    city: "San Diego, CA",
+    city: "Delano, CA",
     date: "January 26, 2026",
     rating: 5,
     title: "Telehealth done right",
-    body: "Honestly the most professional telehealth visit I've had. Dr. Shankar reviewed my migraine history thoroughly and approved me the same day. Highly recommend to anyone in California.",
+    body: "Honestly the most professional telehealth visit I've had. Dr. Shankar reviewed my migraine history thoroughly and approved me the same day. Highly recommend to anyone in Bakersfield or the broader Kern County area.",
   },
 ];

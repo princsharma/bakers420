@@ -2,20 +2,20 @@ import Reveal from "@/components/Reveal";
 
 const STEPS = [
   {
-    title: "Create Your Account",
-    body: "Provide basic information to start your California MMJ evaluation — name, date of birth, and a few details about your condition. Takes under 2 minutes.",
+    title: "Book Your Appointment",
+    body: "Schedule an online consultation with a licensed Bakersfield MMJ doctor at your convenience — from anywhere in California.",
   },
   {
-    title: "Schedule Telehealth Visit",
-    body: "Pick a time that works for you to meet with a CA-licensed physician online. Same-day appointments available 7 days a week.",
-  },
-  {
-    title: "Attend the Evaluation",
-    body: "Join a secure HIPAA-compliant video consultation. Your physician reviews your medical history and qualifying condition under Prop 215.",
+    title: "Attend Your Online Consultation",
+    body: "Speak with a certified practitioner who will review your medical history and discuss whether medical cannabis may be appropriate for your condition.",
   },
   {
     title: "Receive Your Recommendation",
-    body: "If approved, get a digital physician's recommendation the same day. We'll help you file an optional county MMIC application.",
+    body: "If approved, many patients receive their California medical marijuana recommendation shortly after completing their appointment.",
+  },
+  {
+    title: "Access Licensed Dispensaries",
+    body: "Use your recommendation to legally purchase cannabis products from licensed dispensaries throughout California.",
   },
 ];
 
@@ -33,11 +33,13 @@ export default function Steps() {
             How it works
           </span>
           <h2 id="steps-heading" className="heading-secondary mt-2">
-            From application to recommendation in 4 steps
+            How to Get a Medical Marijuana Card in Bakersfield, California
           </h2>
           <p className="text-body mt-4">
-            The fastest path to a California medical marijuana recommendation —
-            designed to be transparent, secure, and same-day.
+            Follow these simple steps to connect with a licensed practitioner
+            and begin your medical cannabis journey. Complete your online
+            evaluation through a secure process aligned with California
+            Department of Public Health (CDPH) guidelines.
           </p>
         </Reveal>
 
@@ -85,8 +87,8 @@ export default function Steps() {
                   aria-hidden="true"
                   className="absolute left-1/2 top-6 hidden h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full font-serif text-base font-bold shadow md:flex"
                   style={{
-                    backgroundColor: "#FACC15",
-                    color: "#1E3A8A",
+                    background: "var(--grad-gold)",
+                    color: "var(--white)",
                   }}
                 >
                   {idx + 1}
@@ -95,6 +97,19 @@ export default function Steps() {
             );
           })}
         </ol>
+
+        <Reveal className="mx-auto mt-10 max-w-3xl text-center">
+          <p className="text-muted text-sm">
+            <strong className="text-[var(--color-heading)]">Note:</strong>{" "}
+            Medical marijuana recommendations in California are governed by the
+            California Department of Public Health (CDPH), while optional MMIC
+            cards are processed through the{" "}
+            <strong className="text-[var(--color-heading)]">
+              Kern County Public Health Services Department
+            </strong>{" "}
+            for Bakersfield residents.
+          </p>
+        </Reveal>
       </div>
     </section>
   );
@@ -120,7 +135,7 @@ function StepCard({
       >
         <span
           className="flex h-9 w-9 items-center justify-center rounded-full font-serif text-sm font-bold"
-          style={{ backgroundColor: "#FACC15", color: "#1E3A8A" }}
+          style={{ background: "var(--grad-gold)", color: "var(--white)" }}
           aria-hidden="true"
         >
           {index}

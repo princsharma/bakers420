@@ -21,22 +21,22 @@ export default function Footer() {
   return (
     <footer
       className="relative text-white"
-      style={{ backgroundColor: "#0F172A" }}
+      style={{ background: "var(--grad-dark)" }}
     >
       <div className="container-px mx-auto max-w-7xl pt-16 pb-6">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <Image
-              src="/assets/logo.svg"
+              src="/assets/logo-light.svg"
               alt="Baker420 California"
               width={200}
               height={44}
-              className="brightness-0 invert mb-4"
+              className="mb-4"
             />
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              Baker420 California connects California residents with
-              state-licensed physicians for online medical marijuana
-              evaluations under Prop 215 and SB 420.
+              Baker420 California connects Bakersfield and Kern County
+              residents with state-licensed physicians for online medical
+              marijuana evaluations under California Prop 215 and SB 94.
             </p>
             <div className="mt-5 flex gap-3">
               <a
@@ -78,9 +78,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-serif text-lg font-semibold text-white mb-4">
+            <h3 className="font-serif text-lg font-semibold text-white mb-4">
               Quick Links
-            </h2>
+            </h3>
             <ul className="space-y-2">
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
@@ -96,9 +96,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-serif text-lg font-semibold text-white mb-4">
+            <h3 className="font-serif text-lg font-semibold text-white mb-4">
               Contact
-            </h2>
+            </h3>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>
                 <a
@@ -130,7 +130,7 @@ export default function Footer() {
           className="mt-12 h-px w-full"
           style={{
             background:
-              "linear-gradient(90deg, transparent, #FACC15 35%, #FACC15 65%, transparent)",
+              "linear-gradient(90deg, transparent, var(--gold) 35%, var(--gold) 65%, transparent)",
           }}
           aria-hidden="true"
         />

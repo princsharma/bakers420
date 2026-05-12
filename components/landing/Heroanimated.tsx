@@ -35,7 +35,7 @@ export default function HeroAnimated() {
             </span>
             <h1 className="heading-primary mt-5 text-white">
               Get Your California Medical Marijuana Card —{" "}
-              <span style={{ color: "#FACC15" }}>100% Online</span>
+              <span className="accent-underline">100% Online</span>
             </h1>
             <p className="mt-5 max-w-xl text-base sm:text-lg text-white/95">
               Connect with a California-licensed physician in minutes. Secure

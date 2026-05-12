@@ -21,10 +21,10 @@ export default function Faq() {
       <div className="container-px mx-auto max-w-4xl">
         <div className="text-center">
           <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)]">
-            Frequently asked
+            Frequently Asked Questions
           </span>
           <h2 id="faq-heading" className="heading-secondary mt-2">
-            Everything California patients ask
+            Bakersfield patients ask, we answer
           </h2>
         </div>
 

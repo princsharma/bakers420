@@ -52,7 +52,7 @@ export default function Stats() {
                 />
                 <p
                   className="mt-3 font-serif text-3xl font-bold"
-                  style={{ color: "#A16207" }}
+                  style={{ color: "var(--g3)" }}
                 >
                   {stat.value}
                 </p>
@@ -79,7 +79,7 @@ export default function Stats() {
                   />
                   <p
                     className="mt-3 font-serif text-3xl font-bold"
-                    style={{ color: "#A16207" }}
+                    style={{ color: "var(--g3)" }}
                   >
                     {stat.value}
                   </p>

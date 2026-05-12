@@ -11,7 +11,7 @@ import {
 import { sleep } from "@/lib/utils";
 
 const fieldBaseClass =
-  "w-full rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm text-[var(--color-heading)] placeholder:text-[var(--color-muted)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-4 focus:ring-[#C2410C]/15 transition";
+  "w-full rounded-xl border-[1.5px] border-[#e8f0ec] bg-white px-4 py-3 text-sm text-[var(--color-heading)] placeholder:text-[var(--color-muted)] focus:outline-none focus:border-[var(--g4)] focus:ring-4 focus:ring-[rgba(82,183,136,0.10)] transition";
 
 const errorClass = "border-red-500 focus:border-red-500 focus:ring-red-100";
 
@@ -51,7 +51,7 @@ export default function QueryForm() {
       >
         <div
           className="mx-auto flex h-14 w-14 items-center justify-center rounded-full"
-          style={{ backgroundColor: "#FFEDD5", color: "#C2410C" }}
+          style={{ backgroundColor: "var(--g6)", color: "var(--g3)" }}
         >
           <CheckCircle2 className="h-8 w-8" aria-hidden="true" />
         </div>

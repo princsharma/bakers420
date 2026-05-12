@@ -21,10 +21,7 @@ export default function Hero() {
     <section
       id="hero"
       className="relative isolate overflow-hidden pt-28 lg:pt-32 pb-16 lg:pb-24"
-      style={{
-        background:
-          "linear-gradient(135deg, #C2410C 0%, #EA580C 35%, #F59E0B 70%, #FACC15 100%)",
-      }}
+      style={{ background: "var(--grad-hero)" }}
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.08]"
@@ -41,7 +38,7 @@ export default function Hero() {
         className="pointer-events-none absolute -top-32 -right-32 h-[520px] w-[520px] rounded-full blur-3xl opacity-40"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(250,204,21,0.7), transparent 70%)",
+            "radial-gradient(closest-side, rgba(82,183,136,0.45), transparent 70%)",
         }}
       />
       <div
@@ -49,7 +46,7 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-40 -left-32 h-[520px] w-[520px] rounded-full blur-3xl opacity-40"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(194,65,12,0.65), transparent 70%)",
+            "radial-gradient(closest-side, rgba(233,196,106,0.45), transparent 70%)",
         }}
       />
 
@@ -62,19 +59,21 @@ export default function Hero() {
           <div className="order-1 lg:order-2 text-white">
             <span className="anim-fade-up inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-white/40 shadow-sm">
               <span
-                className="h-1.5 w-1.5 rounded-full bg-[#FACC15] anim-pulse-ring"
+                className="h-1.5 w-1.5 rounded-full anim-pulse-ring"
+                style={{ backgroundColor: "var(--g5)" }}
                 aria-hidden="true"
               />
-              California Residents · Prop 215 + SB 420
+              Bakersfield · Kern County · Prop 215 + SB 94
             </span>
             <h1 className="heading-primary anim-fade-up anim-delay-1 mt-5 text-white hero-text-shadow">
-              Get Your California Medical Marijuana Card —{" "}
-              <span className="accent-underline">100% Online</span>
+              Apply for a California Medical Marijuana Card{" "}
+              <span className="accent-underline">Online in Bakersfield</span>
             </h1>
             <p className="anim-fade-up anim-delay-2 mt-5 max-w-xl text-base sm:text-lg text-white hero-soft-shadow">
-              Connect with a California-licensed physician in minutes. Secure
-              telehealth evaluation, same-day digital recommendation, and an
-              optional county MMIC application — all from your couch.
+              Getting a Bakersfield medical marijuana card online is now easier
+              for eligible California patients. Our secure telemedicine platform
+              connects you with licensed physicians for a California-compliant
+              evaluation — all from the comfort of home.
             </p>
 
             <ul

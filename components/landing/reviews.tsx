@@ -16,11 +16,16 @@ export default function Reviews() {
         <Reveal className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)]">
-              California patient reviews
+              Bakersfield Patient Reviews
             </span>
             <h2 id="reviews-heading" className="heading-secondary mt-2">
-              4.9 out of 5 — from thousands of California patients
+              What Our Bakersfield Patients Are Saying
             </h2>
+            <p className="text-body mt-4">
+              Patients across Bakersfield, California appreciate the convenience
+              of online medical marijuana evaluations and the professional
+              guidance provided throughout the recommendation process.
+            </p>
           </div>
           <Stars rating={5} className="self-start sm:self-end" />
         </Reveal>
@@ -36,7 +41,7 @@ export default function Reviews() {
             <div className="flex items-start gap-4">
               <span
                 className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full sm:flex"
-                style={{ backgroundColor: "#FACC15", color: "#1E3A8A" }}
+                style={{ background: "var(--grad-gold)", color: "var(--white)" }}
                 aria-hidden="true"
               >
                 <Quote className="h-5 w-5" />
@@ -70,9 +75,9 @@ export default function Reviews() {
               className="snap-start min-w-[85%] sm:min-w-0 card-soft card-hover p-6"
             >
               <Stars rating={r.rating} />
-              <h4 className="mt-3 font-serif text-lg font-semibold text-[var(--color-heading)]">
+              <h3 className="mt-3 font-serif text-lg font-semibold text-[var(--color-heading)]">
                 {r.title}
-              </h4>
+              </h3>
               <p className="text-body mt-2 text-sm">&ldquo;{r.body}&rdquo;</p>
               <p className="mt-3 text-xs font-semibold text-[var(--color-heading)]">
                 {r.name}
@@ -106,8 +111,8 @@ function Stars({
           className="h-5 w-5"
           aria-hidden="true"
           style={{
-            color: i < rating ? "#FACC15" : "#E5E7EB",
-            fill: i < rating ? "#FACC15" : "transparent",
+            color: i < rating ? "var(--gold)" : "rgba(13,40,24,0.12)",
+            fill: i < rating ? "var(--gold)" : "transparent",
           }}
         />
       ))}

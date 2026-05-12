@@ -1,19 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { buildMetadata } from "@/lib/seo";
 import "./globals.css";
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "optional",
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-outfit",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["700", "800"],
+  style: ["normal", "italic"],
   display: "swap",
   variable: "--font-serif",
 });
@@ -23,7 +24,7 @@ const GTM_ID = "GTM-XXXXXXXX";
 export const metadata: Metadata = buildMetadata();
 
 export const viewport: Viewport = {
-  themeColor: "#C2410C",
+  themeColor: "#0d2818",
   width: "device-width",
   initialScale: 1,
 };
@@ -36,15 +37,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} antialiased`}
+      className={`${outfit.variable} ${playfair.variable} antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <Script
           id="gtm-script"
           strategy="afterInteractive"

@@ -8,14 +8,14 @@ export default function SpeakWithDoc() {
       id="speak-with-doc"
       aria-labelledby="speak-heading"
       className="section-py text-white"
-      style={{ backgroundColor: "#1E3A8A" }}
+      style={{ background: "var(--grad-hero)" }}
     >
       <div className="container-px mx-auto max-w-4xl">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_auto] md:gap-12">
           <Reveal>
             <span
               className="text-xs font-bold uppercase tracking-wider"
-              style={{ color: "#FACC15" }}
+              style={{ color: "var(--g5)", letterSpacing: "0.14em" }}
             >
               Still have questions?
             </span>
@@ -26,9 +26,9 @@ export default function SpeakWithDoc() {
               Speak with a California-licensed physician today
             </h2>
             <p className="mt-4 max-w-xl text-white/90">
-              Our care team is standing by 7 days a week, 8am–10pm PT, to help
-              you get evaluated, approved, and on your way to your medical
-              cannabis recommendation.
+              Our care team is standing by 7 days a week to help you get
+              evaluated, approved, and on your way to your medical cannabis
+              recommendation.
             </p>
           </Reveal>
 

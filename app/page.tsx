@@ -9,6 +9,7 @@ import { FAQS, REVIEWS } from "@/lib/content";
 
 const Conditions = dynamic(() => import("@/components/landing/conditions"));
 const Steps = dynamic(() => import("@/components/landing/steps"));
+const WhyUs = dynamic(() => import("@/components/landing/whyus"));
 const Pricing = dynamic(() => import("@/components/landing/pricing"));
 const Doctors = dynamic(() => import("@/components/landing/doctors"));
 const Benefits = dynamic(() => import("@/components/landing/benefits"));
@@ -22,9 +23,9 @@ const Footer = dynamic(() => import("@/components/footer/footer"));
 
 export const metadata = buildMetadata({
   title:
-    "California Medical Marijuana Card Online | $59 Same-Day | Baker420 California",
+    "Bakersfield Medical Marijuana Card Online | $55 Same-Day | Baker420 California",
   description:
-    "Get your California medical marijuana card 100% online. Licensed CA physicians, HIPAA-compliant telehealth evaluations, same-day digital recommendation, money-back guarantee — $59 flat.",
+    "Apply for your California medical marijuana card online in Bakersfield. Licensed CA physicians, HIPAA-compliant telehealth evaluations, same-day digital recommendation, money-back guarantee — $55 flat.",
   canonicalPath: "/",
 });
 
@@ -37,8 +38,23 @@ const medicalOrgSchema = {
   image: `${SITE_CONFIG.url}${SITE_CONFIG.defaultOgImage}`,
   description: SITE_CONFIG.defaultDescription,
   telephone: SITE_CONFIG.phone,
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Bakersfield",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Kern County",
+    },
+    {
+      "@type": "State",
+      name: "California",
+    },
+  ],
   address: {
     "@type": "PostalAddress",
+    addressLocality: "Bakersfield",
     addressRegion: "CA",
     addressCountry: "US",
   },
@@ -89,39 +105,39 @@ const faqSchema = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How to get a California medical marijuana card online with Baker420",
+  name: "How to get a California medical marijuana card online in Bakersfield with Baker420",
   description:
-    "Get a California physician's recommendation entirely online in four steps under Prop 215 and SB 420.",
+    "Get a California physician's recommendation entirely online in four steps under Prop 215 and SB 94.",
   totalTime: "PT15M",
   estimatedCost: {
     "@type": "MonetaryAmount",
     currency: "USD",
-    value: "59",
+    value: "55",
   },
   step: [
     {
       "@type": "HowToStep",
       position: 1,
-      name: "Create Your Account",
-      text: "Provide basic info to start your California MMJ evaluation.",
+      name: "Book Your Appointment",
+      text: "Schedule an online consultation with a licensed Bakersfield MMJ doctor at your convenience.",
     },
     {
       "@type": "HowToStep",
       position: 2,
-      name: "Schedule Telehealth Visit",
-      text: "Pick a time to meet a CA-licensed physician online.",
+      name: "Attend Your Online Consultation",
+      text: "Speak with a certified practitioner who will review your medical history and discuss whether medical cannabis may be appropriate for your condition.",
     },
     {
       "@type": "HowToStep",
       position: 3,
-      name: "Attend the Evaluation",
-      text: "Join a secure video consultation; the physician reviews your medical history and qualifying condition.",
+      name: "Receive Your Recommendation",
+      text: "If approved, many patients receive their California medical marijuana recommendation shortly after completing their appointment.",
     },
     {
       "@type": "HowToStep",
       position: 4,
-      name: "Receive Your Recommendation",
-      text: "If approved, get a digital physician's recommendation the same day; optional county MMIC application.",
+      name: "Access Licensed Dispensaries",
+      text: "Use your recommendation to legally purchase cannabis products from licensed dispensaries throughout California.",
     },
   ],
 };
@@ -136,8 +152,13 @@ const medicalBusinessSchema = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
+    addressLocality: "Bakersfield",
     addressRegion: "CA",
     addressCountry: "US",
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Bakersfield",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -178,6 +199,7 @@ export default function HomePage() {
         <Stats />
         <Conditions />
         <Steps />
+        <WhyUs />
         <Pricing />
         <Doctors />
         <Benefits />

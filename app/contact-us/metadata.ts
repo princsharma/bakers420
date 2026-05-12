@@ -1,14 +1,15 @@
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Contact Us | Baker420 California Medical Marijuana Evaluations",
+  title:
+    "Contact Us | Bakersfield Medical Marijuana Card | Baker420 California",
   description:
-    "Reach the Baker420 California care team for help with your medical marijuana card evaluation, renewal, MMIC application, or HIPAA-secure telehealth visit.",
+    "Reach the Baker420 care team for help with your Bakersfield medical marijuana card evaluation, MMIC renewal, Kern County MMIC application, or HIPAA-secure telehealth visit.",
   canonicalPath: "/contact-us",
   keywords: [
     "Baker420 California contact",
-    "California MMJ support",
+    "Bakersfield MMJ support",
     "California medical marijuana customer service",
-    "MMIC help California",
+    "Kern County MMIC help",
   ],
 });

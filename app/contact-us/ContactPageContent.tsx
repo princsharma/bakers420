@@ -39,10 +39,7 @@ export default function ContactPageContent() {
       <main id="main-content" tabIndex={-1} className="flex-1 pt-24">
         <section
           className="relative isolate overflow-hidden"
-          style={{
-            background:
-              "linear-gradient(135deg, #C2410C 0%, #FACC15 60%, #FFFBF5 100%)",
-          }}
+          style={{ background: "var(--grad-hero)" }}
         >
           <div className="container-px mx-auto max-w-5xl py-16 sm:py-24 text-white">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-3 py-1.5 text-xs font-semibold uppercase tracking-wider ring-1 ring-white/30">
@@ -78,7 +75,7 @@ export default function ContactPageContent() {
                       <span className="flex items-start gap-4">
                         <span
                           className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
-                          style={{ backgroundColor: "#FFEDD5", color: "#C2410C" }}
+                          style={{ backgroundColor: "var(--g6)", color: "var(--g3)" }}
                           aria-hidden="true"
                         >
                           <Icon className="h-5 w-5" />
@@ -115,7 +112,7 @@ export default function ContactPageContent() {
 
                 <div
                   className="mt-8 rounded-2xl p-6 text-white"
-                  style={{ backgroundColor: "#1E3A8A" }}
+                  style={{ background: "var(--grad-dark)" }}
                 >
                   <h3 className="font-serif text-lg font-semibold">
                     Ready to apply?

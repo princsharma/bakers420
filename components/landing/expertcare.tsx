@@ -8,12 +8,12 @@ export default function ExpertCare() {
       id="expert-care"
       aria-labelledby="expert-heading"
       className="section-py text-white"
-      style={{ backgroundColor: "#1E3A8A" }}
+      style={{ background: "var(--grad-dark)" }}
     >
       <Reveal className="container-px mx-auto max-w-5xl text-center">
         <span
           className="text-xs font-bold uppercase tracking-wider"
-          style={{ color: "#FACC15" }}
+          style={{ color: "var(--g5)", letterSpacing: "0.14em" }}
         >
           Expert care, on demand
         </span>
@@ -26,7 +26,7 @@ export default function ExpertCare() {
         <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg text-white/90">
           Our network of California-licensed physicians is built for speed
           without cutting corners — secure video, signed recommendations, and a
-          team that answers when you have questions.
+          team that answers whenever you have questions.
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

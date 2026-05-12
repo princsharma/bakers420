@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 50" role="img" aria-label="CDPH Compliant">
-  <rect x="6" y="10" width="30" height="30" rx="6" fill="none" stroke="#0F172A" stroke-width="2.5"/>
-  <path d="M14 26 L20 32 L30 18" fill="none" stroke="#0F172A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="44" y="22" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#0F172A">CDPH</text>
-  <text x="44" y="36" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Compliant</text>
+  <rect x="6" y="10" width="30" height="30" rx="6" fill="none" stroke="#0d2818" stroke-width="2.5"/>
+  <path d="M14 26 L20 32 L30 18" fill="none" stroke="#0d2818" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="44" y="22" font-family="Outfit, Arial, sans-serif" font-size="11" font-weight="800" fill="#0d2818">CDPH</text>
+  <text x="44" y="36" font-family="Outfit, Arial, sans-serif" font-size="9" font-weight="600" fill="#0d2818">Compliant</text>
 </svg>

@@ -50,7 +50,7 @@ export default function HeaderClient() {
           aria-label="Baker420 California — home"
         >
           <Image
-            src="/assets/logo.svg"
+            src={scrolled ? "/assets/logo.svg" : "/assets/logo-light.svg"}
             alt="Baker420 California"
             width={180}
             height={40}
@@ -66,7 +66,11 @@ export default function HeaderClient() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-heading)] hover:text-[var(--color-primary)] transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled
+                  ? "text-[var(--color-heading)] hover:text-[var(--color-primary)]"
+                  : "text-white/90 hover:text-white"
+              }`}
             >
               {link.label}
             </Link>
@@ -76,7 +80,11 @@ export default function HeaderClient() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:18004202254"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+            className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+              scrolled
+                ? "text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+                : "text-white/90 hover:text-white"
+            }`}
           >
             <PhoneCall className="h-4 w-4" aria-hidden="true" />
             1-800-420-CALI
@@ -88,7 +96,11 @@ export default function HeaderClient() {
 
         <button
           type="button"
-          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-white/80 backdrop-blur"
+          className={`lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur transition-colors ${
+            scrolled
+              ? "border-[var(--color-border)] bg-white/80 text-[var(--color-heading)]"
+              : "border-white/30 bg-white/10 text-white"
+          }`}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -110,7 +122,7 @@ export default function HeaderClient() {
       >
         <button
           type="button"
-          className="absolute inset-0 bg-[#0F172A]/60"
+          className="absolute inset-0 bg-[var(--g1)]/60"
           aria-label="Close menu overlay"
           onClick={() => setOpen(false)}
         />

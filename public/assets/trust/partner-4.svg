@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 50" role="img" aria-label="Trustpilot Verified">
-  <polygon points="20,8 24,18 35,18 26,25 29,36 20,30 11,36 14,25 5,18 16,18" fill="#0F172A"/>
-  <text x="42" y="22" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#0F172A">Trustpilot</text>
-  <text x="42" y="36" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="600" fill="#0F172A">Verified</text>
+  <polygon points="20,8 24,18 35,18 26,25 29,36 20,30 11,36 14,25 5,18 16,18" fill="#0d2818"/>
+  <text x="42" y="22" font-family="Outfit, Arial, sans-serif" font-size="11" font-weight="800" fill="#0d2818">Trustpilot</text>
+  <text x="42" y="36" font-family="Outfit, Arial, sans-serif" font-size="9" font-weight="600" fill="#0d2818">Verified</text>
 </svg>

@@ -47,12 +47,16 @@ export default function Doctors() {
               Meet your physicians
             </span>
             <h2 id="doctors-heading" className="heading-secondary mt-2">
-              California-licensed doctors — vetted and verifiable
+              Our California-Licensed Doctors Team
             </h2>
             <p className="text-body mt-4">
-              Every physician on our network holds an active California medical
-              license and is trained to evaluate qualifying conditions under
-              Prop 215 and SB 420.
+              Every consultation is conducted by a state-licensed California
+              physician authorized to issue medical cannabis recommendations
+              under California&rsquo;s medical marijuana laws — Prop 215
+              (Compassionate Use Act) and SB 420 guidelines. Every Bakersfield
+              patient is cared for by a qualified, legitimate physician who
+              understands both the medical and legal framework of
+              California&rsquo;s medical marijuana program.
             </p>
           </div>
         </Reveal>

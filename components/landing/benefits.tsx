@@ -1,26 +1,26 @@
-import { Wallet, BadgeCheck, Lock, Leaf } from "lucide-react";
+import { ShieldCheck, Leaf, Scale, Receipt } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const BENEFITS = [
   {
-    title: "Lower out-of-pocket costs",
-    body: "MMIC cardholders are exempt from California sales and use tax on medical cannabis purchases — a meaningful savings on every refill.",
-    icon: Wallet,
+    title: "Safe & Regulated Access",
+    body: "Access cannabis products sold through licensed California dispensaries — every product must comply with state testing, labeling, and safety requirements.",
+    icon: ShieldCheck,
   },
   {
-    title: "Verified by California-licensed physicians",
-    body: "Every recommendation is signed by a CA-licensed M.D. or D.O. and verifiable directly with the California Medical Board.",
-    icon: BadgeCheck,
-  },
-  {
-    title: "HIPAA-secure end to end",
-    body: "Encrypted intake, encrypted video, encrypted records. Your evaluation never leaves a HIPAA-compliant environment.",
-    icon: Lock,
-  },
-  {
-    title: "Same-day digital recommendation",
-    body: "Most approved patients receive their physician's recommendation within the same hour — ready to use at any licensed CA dispensary.",
+    title: "Access to a Variety of Products",
+    body: "Qualified patients may access a wide range of cannabis products, including flower, edibles, tinctures, concentrates, oils, vape products, capsules, and topicals.",
     icon: Leaf,
+  },
+  {
+    title: "Legal Protections",
+    body: "A California medical marijuana recommendation may provide certain legal protections and medical cannabis access benefits under California law.",
+    icon: Scale,
+  },
+  {
+    title: "Tax Savings",
+    body: "MMIC holders are exempt from state and local sales and use taxes (typically 7.25%–10.25%) on medicinal cannabis products at licensed California dispensaries.",
+    icon: Receipt,
   },
 ];
 
@@ -35,11 +35,16 @@ export default function Benefits() {
       <div className="container-px mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)]">
-            Why Baker420 California
+            Benefits of Your Card
           </span>
           <h2 id="benefits-heading" className="heading-secondary mt-2">
-            The benefits of holding a California recommendation
+            Benefits of Your Medical Marijuana Card in Bakersfield, California
           </h2>
+          <p className="text-body mt-4">
+            With a valid California medical marijuana recommendation, eligible
+            patients in Bakersfield can access medical cannabis through
+            California&rsquo;s regulated cannabis system.
+          </p>
         </Reveal>
 
         <div className="mt-12 space-y-12 md:space-y-16">
@@ -57,15 +62,15 @@ export default function Benefits() {
                     style={{
                       background:
                         idx % 2 === 0
-                          ? "linear-gradient(135deg, #FFEDD5, #FACC15)"
-                          : "linear-gradient(135deg, #DBEAFE, #FACC15)",
+                          ? "linear-gradient(135deg, rgba(82,183,136,0.18), rgba(149,213,178,0.32))"
+                          : "linear-gradient(135deg, rgba(233,196,106,0.22), rgba(149,213,178,0.32))",
                     }}
                     aria-hidden="true"
                   >
                     <div className="flex h-full w-full items-center justify-center">
                       <Icon
                         className="h-24 w-24 anim-float"
-                        style={{ color: "#1E3A8A" }}
+                        style={{ color: "var(--g2)" }}
                         strokeWidth={1.5}
                       />
                     </div>
