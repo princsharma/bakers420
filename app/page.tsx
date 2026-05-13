@@ -22,10 +22,20 @@ const SpeakWithDoc = dynamic(() => import("@/components/landing/speakwithdoc"));
 const Footer = dynamic(() => import("@/components/footer/footer"));
 
 export const metadata = buildMetadata({
-  title:
-    "Bakersfield Medical Marijuana Card Online | $55 Same-Day | Baker420 California",
+  title: "Apply Your Medical Marijuana Card in Bakersfield",
   description:
-    "Apply for your California medical marijuana card online in Bakersfield. Licensed CA physicians, HIPAA-compliant telehealth evaluations, same-day digital recommendation, money-back guarantee — $55 flat.",
+    "Get your Bakersfield medical marijuana card recommendation online with licensed doctors, private consultations, and fast approval.",
+  keywords: [
+    "Medical Marijuana Card Bakersfield",
+    "Bakersfield medical marijuana card",
+    "Bakersfield MMJ doctor",
+    "California medical marijuana card online",
+    "Kern County MMIC",
+    "Prop 215",
+    "SB 94",
+    "online MMJ evaluation California",
+    "telehealth cannabis Bakersfield",
+  ],
   canonicalPath: "/",
 });
 
