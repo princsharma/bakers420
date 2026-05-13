@@ -10,10 +10,13 @@ export const SITE_CONFIG = {
   twitterHandle: "@baker420ca",
   locale: "en_US" as const,
   phone: "1-800-420-CALI",
+  email: "contact@bakers420.com",
   region: "California",
   city: "Bakersfield",
   county: "Kern",
   defaultOgImage: "/assets/og-homepage.svg",
+  googleSiteVerification: "A2tCQn-mzjI_lsIPuf3g6ICVLsDThzb67eB5NeHlm04",
+  gtmId: "GTM-KZP5FX7M",
 } as const;
 
 type OgType = "website" | "article" | "profile";
@@ -98,6 +101,9 @@ export function buildMetadata(input: BuildMetadataInput = {}): Metadata {
         "max-image-preview": "large",
         "max-snippet": -1,
       },
+    },
+    verification: {
+      google: SITE_CONFIG.googleSiteVerification,
     },
     ...extra,
   };

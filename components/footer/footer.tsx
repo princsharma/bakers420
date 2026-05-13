@@ -110,10 +110,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:care@baker420.com"
+                  href="mailto:contact@bakers420.com"
                   className="hover:text-[var(--color-secondary)]"
                 >
-                  care@baker420.com
+                  contact@bakers420.com
                 </a>
               </li>
               <li>California, United States</li>

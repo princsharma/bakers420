@@ -2,24 +2,38 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
-import { CheckCircle2, Loader2, ShieldCheck } from "lucide-react";
+import { Loader2, ShieldCheck } from "lucide-react";
 import { LeadFormSchema, type LeadFormValues } from "@/lib/formSchema";
-import { sleep } from "@/lib/utils";
+
+const STATE = {
+  stateAbbr: "CA",
+  stateName: "California",
+  city: "Bakersfield",
+  timezone: "PST",
+} as const;
+
+const UTM_SOURCE = "baker420";
+
+const HEALLY_PREFILL_URL =
+  "https://mymmj.getheally.com/patient_admin/prefill";
 
 const fieldBaseClass =
   "w-full rounded-xl border-[1.5px] border-[#e8f0ec] bg-white px-4 py-3 text-sm text-[var(--color-heading)] placeholder:text-[var(--color-muted)] focus:outline-none focus:border-[var(--g4)] focus:ring-4 focus:ring-[rgba(82,183,136,0.10)] transition";
 
 const errorClass = "border-red-500 focus:border-red-500 focus:ring-red-100";
 
-export default function LeadForm() {
-  const [submitted, setSubmitted] = useState(false);
+function base64UrlEncode(input: string): string {
+  return btoa(input)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+}
 
+export default function LeadForm() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
   } = useForm<LeadFormValues>({
     resolver: zodResolver(LeadFormSchema),
     mode: "onTouched",
@@ -32,41 +46,40 @@ export default function LeadForm() {
     },
   });
 
-  const onSubmit = async () => {
-    await sleep(800);
-    setSubmitted(true);
-    reset();
-  };
+  const onSubmit = async (data: LeadFormValues) => {
+    const nameParts = data.fullName.trim().split(/\s+/);
+    const firstName = nameParts[0];
+    const lastName = nameParts.slice(1).join(" ") || "";
 
-  if (submitted) {
-    return (
-      <div
-        role="status"
-        aria-live="polite"
-        className="card-soft p-7 sm:p-8 max-w-lg w-full text-center"
-      >
-        <div
-          className="mx-auto flex h-14 w-14 items-center justify-center rounded-full"
-          style={{ backgroundColor: "var(--g6)", color: "var(--g3)" }}
-        >
-          <CheckCircle2 className="h-8 w-8" aria-hidden="true" />
-        </div>
-        <h3 className="heading-tertiary mt-5">You&rsquo;re on the list</h3>
-        <p className="text-body mt-3">
-          Thanks! A California-licensed physician will reach out within{" "}
-          <strong>1 business hour</strong> to schedule your secure telehealth
-          evaluation.
-        </p>
-        <button
-          type="button"
-          className="btn-secondary mt-6"
-          onClick={() => setSubmitted(false)}
-        >
-          Submit another request
-        </button>
-      </div>
+    const payload = {
+      first_name: firstName,
+      last_name: lastName,
+      email: data.email,
+      phone: data.phone,
+      state: STATE.stateAbbr,
+      state_of_evaluation: STATE.stateAbbr,
+      timezone: STATE.timezone,
+      city: STATE.city,
+      extra_data: {
+        "contact[contact_type]": "Web Form",
+        "product[name]": "Eva",
+        utm_source: UTM_SOURCE,
+      },
+    };
+
+    const preset = base64UrlEncode(JSON.stringify(payload));
+
+    if (typeof window !== "undefined") {
+      window.dataLayer?.push({
+        event: "heallyValidatedSubmit",
+        utm_source: UTM_SOURCE,
+      });
+    }
+
+    window.location.assign(
+      `${HEALLY_PREFILL_URL}?redirect=sched&preset=${preset}&utm_source=${UTM_SOURCE}`,
     );
-  }
+  };
 
   return (
     <form
@@ -156,11 +169,22 @@ export default function LeadForm() {
             id="phone"
             type="tel"
             autoComplete="tel-national"
-            placeholder="(415) 555-0123"
+            placeholder="555-123-0123"
+            maxLength={12}
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? "phone-error" : undefined}
             className={`${fieldBaseClass} ${errors.phone ? errorClass : ""}`}
             {...register("phone")}
+            onChange={(e) => {
+              const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+              let formatted = digits;
+              if (digits.length >= 7) {
+                formatted = `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+              } else if (digits.length >= 4) {
+                formatted = `${digits.slice(0, 3)}-${digits.slice(3)}`;
+              }
+              e.target.value = formatted;
+            }}
           />
           {errors.phone ? (
             <p id="phone-error" className="mt-1 text-xs font-medium text-red-600">
@@ -220,20 +244,21 @@ export default function LeadForm() {
         <button
           type="submit"
           disabled={isSubmitting}
+          aria-busy={isSubmitting}
           className="btn-primary w-full mt-2"
         >
           {isSubmitting ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-              Submitting…
+              Redirecting to secure scheduler…
             </>
           ) : (
-            <>Start My Evaluation</>
+            <>Apply for Your MMJ Card</>
           )}
         </button>
         <p className="text-xs text-center text-[var(--color-muted)]">
-          By submitting, you agree to our terms. Money-back guarantee if not
-          approved.
+          We&rsquo;ll take you to our secure scheduling partner to finish
+          booking. Money-back guarantee if not approved.
         </p>
       </div>
     </form>

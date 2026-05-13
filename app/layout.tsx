@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Playfair_Display } from "next/font/google";
 import Script from "next/script";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, SITE_CONFIG } from "@/lib/seo";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
   variable: "--font-serif",
 });
 
-const GTM_ID = "GTM-XXXXXXXX";
+const GTM_ID = SITE_CONFIG.gtmId;
 
 export const metadata: Metadata = buildMetadata();
 
