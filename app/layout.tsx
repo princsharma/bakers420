@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Outfit, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { buildMetadata, SITE_CONFIG } from "@/lib/seo";
+import HashScrollFix from "@/components/HashScrollFix";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -58,6 +59,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
+        <HashScrollFix />
         {children}
       </body>
     </html>
