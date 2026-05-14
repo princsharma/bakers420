@@ -27,11 +27,11 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <Image
-              src="/assets/logo-light.svg"
+              src="/assets/logo.webp"
               alt="Baker420 California"
               width={200}
               height={44}
-              className="mb-4"
+              className="mb-4 h-11 w-auto"
             />
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
               Baker420 California connects Bakersfield and Kern County

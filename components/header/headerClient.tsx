@@ -50,11 +50,12 @@ export default function HeaderClient() {
           aria-label="Baker420 California — home"
         >
           <Image
-            src={scrolled ? "/assets/logo.svg" : "/assets/logo-light.svg"}
+            src="/assets/logo.webp"
             alt="Baker420 California"
             width={180}
             height={40}
             priority
+            className="h-10 w-auto"
           />
         </Link>
 
