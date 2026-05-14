@@ -68,6 +68,14 @@ export function buildMetadata(input: BuildMetadataInput = {}): Metadata {
     alternates: {
       canonical,
     },
+    icons: {
+      icon: [
+        { url: "/assets/baker-favicon.webp", type: "image/webp" },
+        { url: "/icon.webp", type: "image/webp" },
+      ],
+      shortcut: "/assets/baker-favicon.webp",
+      apple: "/assets/baker-favicon.webp",
+    },
     openGraph: {
       type: ogType,
       title,
