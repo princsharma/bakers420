@@ -43,12 +43,13 @@ export default function Steps() {
           </p>
         </Reveal>
 
-        <ol className="relative mt-14 mx-auto max-w-4xl" aria-label="Process steps">
+        <div className="relative mt-14 mx-auto max-w-4xl">
           <span
             aria-hidden="true"
             className="absolute left-1/2 top-3 hidden h-[calc(100%-1.5rem)] w-px -translate-x-1/2 border-l-2 border-dashed border-[var(--color-primary)]/40 md:block"
           />
 
+          <ol aria-label="Process steps">
           {STEPS.map((step, idx) => {
             const isLeft = idx % 2 === 0;
             return (
@@ -96,7 +97,8 @@ export default function Steps() {
               </li>
             );
           })}
-        </ol>
+          </ol>
+        </div>
 
         <Reveal className="mx-auto mt-10 max-w-3xl text-center">
           <p className="text-muted text-sm">

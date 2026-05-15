@@ -57,25 +57,8 @@ export default function Conditions() {
           </p>
         </Reveal>
 
-        <div
-          className="mt-10"
-          style={{ columnGap: "1.25rem" }}
-        >
-          <div
-            className="conditions-masonry"
-            style={{
-              columnCount: 1,
-              columnGap: "1.25rem",
-            }}
-          >
-            <style>{`
-              @media (min-width: 640px) {
-                .conditions-masonry { column-count: 2 !important; }
-              }
-              @media (min-width: 1024px) {
-                .conditions-masonry { column-count: 3 !important; }
-              }
-            `}</style>
+        <div className="mt-10">
+          <div className="conditions-masonry">
             {CONDITIONS.map((c, i) => {
               const Icon = c.icon;
               return (

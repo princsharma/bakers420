@@ -531,6 +531,21 @@
   scrollbar-width: none;
 }
 
+.conditions-masonry {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .conditions-masonry {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .conditions-masonry {
+    column-count: 3;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
