@@ -27,11 +27,19 @@ export default function StartJourney() {
           recommendation.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link href="/#hero" className="btn-primary">
+          <Link
+            href="/#hero"
+            title="Apply for your Bakersfield medical marijuana card — $55"
+            className="btn-primary"
+          >
             Apply Now — $55
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
-          <Link href="/#pricing" className="btn-secondary">
+          <Link
+            href="/#pricing"
+            title="See what's included with your Bakersfield medical marijuana card"
+            className="btn-secondary"
+          >
             See what&rsquo;s included
           </Link>
         </div>

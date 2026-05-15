@@ -28,7 +28,8 @@ export default function Footer() {
           <div>
             <Image
               src="/assets/logo.webp"
-              alt="Baker420 California"
+              alt="Baker420 California Bakersfield medical marijuana card service logo"
+              title="Baker420 California"
               width={200}
               height={44}
               className="mb-4 h-11 w-auto"
@@ -41,6 +42,7 @@ export default function Footer() {
             <div className="mt-5 flex gap-3">
               <a
                 aria-label="Facebook"
+                title="Baker420 California on Facebook"
                 href="#"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 hover:bg-[var(--color-primary)] transition-colors"
               >
@@ -48,6 +50,7 @@ export default function Footer() {
               </a>
               <a
                 aria-label="Instagram"
+                title="Baker420 California on Instagram"
                 href="#"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 hover:bg-[var(--color-primary)] transition-colors"
               >
@@ -55,6 +58,7 @@ export default function Footer() {
               </a>
               <a
                 aria-label="Twitter"
+                title="Baker420 California on Twitter"
                 href="#"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 hover:bg-[var(--color-primary)] transition-colors"
               >
@@ -62,6 +66,7 @@ export default function Footer() {
               </a>
               <a
                 aria-label="YouTube"
+                title="Baker420 California on YouTube"
                 href="#"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 hover:bg-[var(--color-primary)] transition-colors"
               >
@@ -69,6 +74,7 @@ export default function Footer() {
               </a>
               <a
                 aria-label="LinkedIn"
+                title="Baker420 California on LinkedIn"
                 href="#"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 hover:bg-[var(--color-primary)] transition-colors"
               >
@@ -86,6 +92,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    title={`${link.label} — Bakersfield medical marijuana card`}
                     className="text-sm text-slate-300 hover:text-[var(--color-secondary)] transition-colors"
                   >
                     {link.label}
@@ -103,6 +110,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:18004202254"
+                  title="Call Baker420 California about your Bakersfield medical marijuana card"
                   className="hover:text-[var(--color-secondary)]"
                 >
                   1-800-420-CALI
@@ -111,6 +119,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:contact@bakers420.com"
+                  title="Email Baker420 California for Bakersfield medical marijuana card support"
                   className="hover:text-[var(--color-secondary)]"
                 >
                   contact@bakers420.com
@@ -147,6 +156,7 @@ export default function Footer() {
               <li key={link.label}>
                 <Link
                   href={link.href}
+                  title={link.label}
                   className="hover:text-[var(--color-secondary)]"
                 >
                   {link.label}

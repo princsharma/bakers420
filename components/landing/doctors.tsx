@@ -76,7 +76,8 @@ export default function Doctors() {
                 <div className="mx-auto h-28 w-28 overflow-hidden rounded-full ring-4 ring-[var(--color-secondary)]/40">
                   <Image
                     src={doc.image}
-                    alt={`Portrait of ${doc.name}`}
+                    alt={`Portrait of ${doc.name}, ${doc.specialty} — California-licensed Bakersfield medical marijuana card physician`}
+                    title={doc.name}
                     width={160}
                     height={160}
                     className="h-full w-full object-cover"

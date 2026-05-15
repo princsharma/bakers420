@@ -97,7 +97,11 @@ export default function Pricing() {
                 <p className="text-xs text-[var(--color-muted)] mt-1">
                   + optional county MMIC fee
                 </p>
-                <Link href="/#hero" className="btn-primary mt-5 w-full">
+                <Link
+                  href="/#hero"
+                  title="Start your Bakersfield medical marijuana card evaluation"
+                  className="btn-primary mt-5 w-full"
+                >
                   Start My Evaluation
                 </Link>
                 <p className="mt-3 text-[11px] text-[var(--color-muted)]">
@@ -155,6 +159,7 @@ export default function Pricing() {
               </div>
               <Link
                 href="/#hero"
+                title="Renew your California medical marijuana card"
                 className="btn-secondary whitespace-nowrap"
               >
                 Renew Your CA MMJ Card

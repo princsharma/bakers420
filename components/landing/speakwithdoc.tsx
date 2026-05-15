@@ -38,6 +38,7 @@ export default function SpeakWithDoc() {
           >
             <a
               href="tel:18004202254"
+              title="Call a California-licensed physician about your Bakersfield medical marijuana card"
               className="btn-gold inline-flex items-center gap-2"
             >
               <PhoneCall className="h-4 w-4" aria-hidden="true" />
@@ -45,6 +46,7 @@ export default function SpeakWithDoc() {
             </a>
             <Link
               href="/contact-us"
+              title="Message Baker420 California medical marijuana card support"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />

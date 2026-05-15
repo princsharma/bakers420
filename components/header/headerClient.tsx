@@ -48,10 +48,12 @@ export default function HeaderClient() {
           href="/"
           className="flex items-center gap-2"
           aria-label="Baker420 California — home"
+          title="Baker420 California — home"
         >
           <Image
             src="/assets/logo.webp"
-            alt="Baker420 California"
+            alt="Baker420 California Bakersfield medical marijuana card service logo"
+            title="Baker420 California"
             width={180}
             height={40}
             priority
@@ -67,6 +69,7 @@ export default function HeaderClient() {
             <Link
               key={link.href}
               href={link.href}
+              title={`${link.label} — Bakersfield medical marijuana card`}
               className={`text-sm font-medium transition-colors ${
                 scrolled
                   ? "text-[var(--color-heading)] hover:text-[var(--color-primary)]"
@@ -81,6 +84,7 @@ export default function HeaderClient() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:18004202254"
+            title="Call Baker420 California about your Bakersfield medical marijuana card"
             className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
               scrolled
                 ? "text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
@@ -90,7 +94,11 @@ export default function HeaderClient() {
             <PhoneCall className="h-4 w-4" aria-hidden="true" />
             1-800-420-CALI
           </a>
-          <Link href="/#hero" className="btn-primary text-sm">
+          <Link
+            href="/#hero"
+            title="Start your Bakersfield medical marijuana card application"
+            className="btn-primary text-sm"
+          >
             Apply Now
           </Link>
         </div>
@@ -155,6 +163,7 @@ export default function HeaderClient() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
+                title={`${link.label} — Bakersfield medical marijuana card`}
                 className="rounded-xl px-3 py-3 text-base font-medium text-[var(--color-heading)] hover:bg-[var(--color-surface-alt)]"
               >
                 {link.label}
@@ -163,6 +172,7 @@ export default function HeaderClient() {
             <div className="mt-4 flex flex-col gap-3">
               <a
                 href="tel:18004202254"
+                title="Call Baker420 California about your Bakersfield medical marijuana card"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 text-sm font-medium text-[var(--color-accent)]"
               >
                 <PhoneCall className="h-4 w-4" aria-hidden="true" />
@@ -171,6 +181,7 @@ export default function HeaderClient() {
               <Link
                 href="/#hero"
                 onClick={() => setOpen(false)}
+                title="Start your Bakersfield medical marijuana card application"
                 className="btn-primary text-sm"
               >
                 Apply Now

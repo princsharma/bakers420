@@ -13,12 +13,14 @@ const CONTACT_INFO = [
     label: "Phone",
     value: "1-800-420-CALI",
     href: "tel:18004202254",
+    linkTitle: "Call Baker420 California about your Bakersfield medical marijuana card",
   },
   {
     icon: Mail,
     label: "Email",
     value: "care@baker420.com",
     href: "mailto:care@baker420.com",
+    linkTitle: "Email Baker420 California for Bakersfield medical marijuana card support",
   },
   {
     icon: MapPin,
@@ -98,6 +100,7 @@ export default function ContactPageContent() {
                         {info.href ? (
                           <a
                             href={info.href}
+                            title={info.linkTitle}
                             className="block"
                           >
                             {content}
@@ -120,7 +123,11 @@ export default function ContactPageContent() {
                   <p className="mt-1 text-sm text-white/85">
                     Skip the email back-and-forth and start your evaluation now.
                   </p>
-                  <Link href="/#hero" className="btn-gold mt-4">
+                  <Link
+                    href="/#hero"
+                    title="Apply for your Bakersfield medical marijuana card in 2 minutes"
+                    className="btn-gold mt-4"
+                  >
                     Apply in 2 minutes
                   </Link>
                 </div>

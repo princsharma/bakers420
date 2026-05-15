@@ -30,12 +30,17 @@ export default function ExpertCare() {
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link href="/#hero" className="btn-gold">
+          <Link
+            href="/#hero"
+            title="Start your Bakersfield medical marijuana card evaluation"
+            className="btn-gold"
+          >
             Start My Evaluation
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
           <Link
             href="/contact-us"
+            title="Talk to Baker420 California medical marijuana card support"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
           >
             Talk to support

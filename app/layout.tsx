@@ -56,7 +56,11 @@ export default function RootLayout({
             title="Google Tag Manager"
           />
         </noscript>
-        <a href="#main-content" className="skip-link">
+        <a
+          href="#main-content"
+          title="Skip to main content"
+          className="skip-link"
+        >
           Skip to main content
         </a>
         <HashScrollFix />

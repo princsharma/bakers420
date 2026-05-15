@@ -89,11 +89,11 @@ export default function Hero() {
                   <span className="pill-badge">
                     <Image
                       src={badge.src}
-                      alt=""
+                      alt={`${badge.label} badge for Bakersfield medical marijuana card evaluation`}
+                      title={badge.label}
                       width={20}
                       height={20}
                       priority
-                      aria-hidden="true"
                     />
                     {badge.label}
                   </span>

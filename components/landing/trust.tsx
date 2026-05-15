@@ -28,7 +28,8 @@ export default function Trust() {
             <li key={p.name} className="group">
               <Image
                 src={p.src}
-                alt={p.name}
+                alt={`${p.name} — trust partner for Bakersfield medical marijuana card service`}
+                title={p.name}
                 width={140}
                 height={50}
                 className="h-10 w-auto grayscale opacity-70 transition group-hover:grayscale-0 group-hover:opacity-100"
