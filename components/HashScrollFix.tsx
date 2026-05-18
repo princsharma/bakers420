@@ -31,7 +31,6 @@ export default function HashScrollFix() {
 
       if (hash === "#top") {
         e.preventDefault();
-        e.stopPropagation();
         window.scrollTo({ top: 0, behavior: "smooth" });
         history.replaceState(
           null,
@@ -46,7 +45,6 @@ export default function HashScrollFix() {
       if (!el) return;
 
       e.preventDefault();
-      e.stopPropagation();
       el.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(
         null,

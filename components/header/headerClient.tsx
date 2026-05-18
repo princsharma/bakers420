@@ -174,6 +174,7 @@ export default function HeaderClient() {
             <div className="mt-4 flex flex-col gap-3">
               <a
                 href="tel:18004202254"
+                onClick={() => setOpen(false)}
                 title="Call Baker420 California about your Bakersfield medical marijuana card"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 text-sm font-medium text-[var(--color-accent)]"
               >
