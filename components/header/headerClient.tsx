@@ -36,6 +36,7 @@ export default function HeaderClient() {
   }, [open]);
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -122,13 +123,14 @@ export default function HeaderClient() {
           )}
         </button>
       </div>
+    </header>
 
-      <div
-        className={`fixed inset-0 z-40 transition-opacity duration-300 lg:hidden ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-        aria-hidden={!open}
-      >
+    <div
+      className={`fixed inset-0 z-60 transition-opacity duration-300 lg:hidden ${
+        open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      }`}
+      aria-hidden={!open}
+    >
         <button
           type="button"
           className="absolute inset-0 bg-[var(--g1)]/60"
@@ -190,6 +192,6 @@ export default function HeaderClient() {
           </nav>
         </aside>
       </div>
-    </header>
+    </>
   );
 }
